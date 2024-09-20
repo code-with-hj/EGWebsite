@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+   margin: 0;
+   padding: 0;
+}
+html{
+   scroll-behavior: smooth;
+}
+
+.logo{
+ width: 20%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.logo img{
+    width: 33%;
+    border: 3px solid white;
+    border-radius: 50px;
+}
+.navbar{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: sticky;
+   top: 0;
+   cursor: pointer;
+}
+.nav-list{
+   width: 70%;
+   display: flex;
+   align-items: center;
+}
+
+.nav-list li{
+    list-style: none;
+    padding: 23px 30px;
+}
+
+.nav-list li a{
+   text-decoration: none;
+   color: white;
+   font-size: 16px;
+   font-family: 'Ubuntu', sans-serif;
+}
+
+.nav-list li a:hover{
+   color: gray;
+}
+
+.rightNav{
+      width: 30%;
+      text-align: right;
+      padding: 0 23px;
+}
+
+#search{
+   padding: 5px;
+    font-size: 17px;
+    border: 2px solid gray;
+  border-radius: 9px;
+}
+
+.background{
+    background: rgba(0, 0, 0, 0.7) url('https://source.unsplash.com/1600x900/?class,student');
+    background-size: cover;
+     background-blend-mode: darken;
+}
+
+.firstSection{
+   height: 67vh;
+}
+
+.box-main{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   max-width: 50%;
+   margin: auto;
+   height: 80%;
+}
+
+.firstHalf{
+   width: 80%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.secondHalf{
+    width: 30%;
+}
+
+.secondHalf img{
+    width: 70%;
+    border: 4px solid white;
+    border-radius: 150px;
+}
+
+.text-big{
+   font-size: 36px;
+}
+.text-small{
+   font-size: 18px;
+}
+
+.btn{
+   padding: 8px 20px;
+   margin: 8px 3px;
+   border: 2px solid white;
+   border-radius: 8px;
+   background: none;
+   color: white;
+   cursor: pointer;
+   font-family: 'Ubuntu', sans-serif;
+   font-size: 16px;
+} 
+.btn-sm{
+   padding: 6px 10px;
+   vertical-align: middle;
+   font-size: 16px;
+}
+
+.btn-dark{
+   color: black;
+   border: 2px solid gray;
+   cursor: pointer;
+}
+.section{
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   max-width: 80%;
+   margin: auto;
+   font-family: 'Ubuntu', sans-serif;
+}
+
+.section-left{
+   flex-direction: row-reverse; 
+}
+
+.paras{
+   padding: 0px 65px;
+}
+
+.sectionTag{
+   padding: 16px 0;
+}
+
+.sectionSubTag{
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.thumbnail img{
+   width: 270px;
+    border: 2px solid black;
+    border-radius: 26px;
+    margin-top: 19px;
+}
+
+.contact{
+   background-color: aliceblue;
+   height: 833px;
+}
+
+.text-center{
+   text-align: center;
+   padding-top: 10px;
+   font-family: 'Ubuntu', sans-serif;
+   font-size: 35px;
+}
+
+.form{
+   max-width: 62%;
+   margin: 25px auto;
+}
+
+.form-input{
+   margin: 14px 0;
+   padding: 5px 13px;
+   width: 100%;
+   font-size: 19px;
+   border: 2px solid gray;
+   border-radius: 6px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.text-footer{
+   text-align: center;
+   padding: 30px 0;
+   font-family: 'Ubuntu', sans-serif;
+   display: flex;
+   justify-content: center;
+   color: white;
+   background-color: black;
+}
+
+
+.burger{
+   display: none;
+   position: absolute;
+   cursor: pointer;
+   right: 5%;
+   top: 15px;
+}
+.line{
+   width: 33px;
+   background-color: white;
+   height: 4px;
+   margin: 5px 3px;
+}
+@media only screen and (max-width: 1100px){
+   .nav-list{
+      flex-direction: column;
+   }
+   .navbar{
+      flex-direction: column;
+      transition: all 0.7s ease-out;
+      height: 447px;
+   }
+   .rightNav{
+      text-align: center;
+   }
+   .box-main{
+      flex-direction: column-reverse;
+      max-width: 100%;
+   }
+   #search{
+      width: 100%;
+   }
+   .burger{
+      display: block;
+   }
+   .h-nav-resp{
+      height: 72px;
+   }
+   .v-class-resp{
+      opacity: 0;
+   }
+   .section{
+      flex-direction: column-reverse;
+   }
+   .text-small{
+      text-align: center;
+   }
+   .text-big{
+      text-align: center;
+   }
+   .buttons{
+      text-align: center;
+   }
+   .paras{
+      padding: 0;
+   }
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your name</title>
+</head>
+<body>
+    <nav class="navbar background h-nav-resp">
+        <ul class="nav-list v-class-resp">
+            <li> <a href="#home">Home</a></li>
+            <li> <a href="#about">About</a></li>
+            <li> <a href="#services">Services</a></li>
+            <li> <a href="#contact">Contact US</a></li>
+        </ul>
+        <div class="rightNav v-class-resp">
+            <input type="text" name="search" id="search">
+            <button class="btn btn-sm">Search</button>
+        </div>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <section class="background firstSection" id="home">
+         <div class="box-main">
+            <div class="firstHalf">
+                <p class="text-big">The Future of Education is here</p>
+                <p class="text-small">In this world of 7 billion People we need to Educate
+                    all of them.This is the Future of an Educated world and we have best teachers</p>
+                    <div class="buttons">
+                        <button class="btn">Join now</button>
+                        <button class="btn">Addmision Open</button>
+                    </div>
+            </div>
+
+            <div class="secondHalf">
+            </div>
+         </div>
+    </section>
+     
+    <section class="section" id="about">
+        <div class="paras">
+        <p class="sectionTag text-big">The end of your search is here</p>
+        <p class="sectionSubTag text-small">We are proud to say that we have best teachers. we give you 100% result we make your child perfect in all subjects. Daily test of all subjects special priority in maths.Best teacher of maths . we have graduated teachers we are continously getting progress in our result every year. We are having exprience of more than 14 years so Addmisions open Hurry UP Join now.Our niche is creating personalised learning experiences for every type of learner. The  way of learning provides students a learning platform where they can learn, engage and be excited about charting their own path to discover the world.  The Sitaram Tuition brings together the best teachers, technology, content, media for creating a seamless, world class learning experience for each and every student.Based on the student's progress, personal learning profiles are created which help analyse strengths and areas of improvement. Each concept gets tagged at different levels of difficulty to create a smooth learning curve which keeps students motivated through any new learning challenge. Whenever errors are made, motivating remedial methods are generated to strengthen and improve the student's learning experience.</p>
+    </div>
+        <div class="thumbnail">
+       
+        </div>
+    </section>     
+
+    <section class="section-left" id="services">
+        <div class="paras">
+        <p class="sectionTag text-big">Transforming Education in India</p>
+        <p class="sectionSubTag text-small">The definition of education has been explored by theorists from various fields. Many agree that education is a purposeful activity aimed at achieving certain goals, which include the transmission of knowledge, skills, and character traits. However, there is extensive debate regarding its exact nature beyond these general features. Some theorists view education primarily as a process that occurs during educational events such as schooling, teaching, and learning.[6][7][2] Others perceive it not as a process but as the product resulting from this process, emphasizing the mental states and dispositions of educated persons.[6][7][2] Additionally, the term may also refer to an academic field that studies the methods, processes, and social institutions involved in teaching and learning.[7] The term "education" is derived from the Latin words educare, meaning "bring up, rear, educate", primarily related to the mind, and educere, meaning "bring out, lead forth", and refers to the bodily level.
+
+            Some theorists provide precise definitions by identifying the specific features that are exclusive to all forms of education. R. S. Peters, for instance, outlines three essential features for education:</p>
+    </div>
+        <div class="thumbnail">
+
+
+        </div>
+    </section>   
+
+    <section class="section">
+        <div class="paras">
+        <p class="sectionTag text-big">Lets Grow Together</p>
+        <p class="sectionSubTag text-small">Some theorists focus on a single overarching purpose of education and see the more specific aims as means to this end. For example, they may claim that socialization is the aim of education. This means that education is seen as the process of transmitting accumulated knowledge from one generation to the next. This process helps the student to function in society as a regular citizen. More person-centered definitions focus on the well-being of the student instead. For them, education is a process that helps them lead a good life or the life they wish to lead. Various scholars stress critical thinking to distinguish education from indoctrination. For them, mere indoctrination is only interested in instilling beliefs in the student
+            .</p>
+    </div>
+        <div class="thumbnail">
+
+
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h1 class="text-center">Contact US</h1>
+        <div class="form">
+       <input class="form-input" type="text" name="name" id="name" placeholder="Enter Your Name">
+       <input class="form-input" type="phone" name="phone" id="phone" placeholder="Enter Your Phone">
+       <input class="form-input" type="email" name="email" id="email" placeholder="Enter Your Email">
+       <textarea class="form-input" name="text" id="text" cols="30" rows="10" placeholder="Ellaborate Your Concern"></textarea>
+       <button class="btn-sm btn-dark">Submit</button>
+        </div>
+         </section>
+         
+
+        <footer class="background">
+            <p class="text-footer">
+            Copright &copy; 2027 - www.your name.com - All rights reserved 
+        </p>
+        </footer>
+        <script>
+            burger = document.querySelector('.burger')
+navbar = document.querySelector('.navbar')
+navList = document.querySelector('.nav-list')
+rightNav = document.querySelector('.rightNav')
+
+
+
+burger.addEventListener('click', ()=> {
+  rightNav.classList.toggle('v-class-resp');
+  navList.classList.toggle('v-class-resp');
+  navbar.classList.toggle('h-nav-resp');
+})
+        </script>
+</body>
+</html>
